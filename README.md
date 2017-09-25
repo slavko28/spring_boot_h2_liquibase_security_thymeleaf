@@ -6,5 +6,5 @@ I use here:
   - web;
   - thymeleaf;
   - security.
-- H2 database (with ability to use web console);
+- H2 database (with ability to use web console http://localhost:8080/console (JDBC URL: jdbc:h2:mem:testdb));
 - Liquibase.
