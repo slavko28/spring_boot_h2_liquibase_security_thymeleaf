@@ -1,4 +1,5 @@
 This is a project that shows how to use spring boot in simple web app.
+
 I use here:
 - Spring boot:
   - data-jpa;
