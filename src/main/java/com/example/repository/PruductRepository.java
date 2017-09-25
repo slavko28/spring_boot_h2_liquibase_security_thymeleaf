@@ -1,6 +1,6 @@
-package com.exampl.repository;
+package com.example.repository;
 
-import com.exampl.model.Product;
+import com.example.model.Product;
 import org.springframework.data.repository.CrudRepository;
 
 public interface PruductRepository extends CrudRepository<Product, Integer> {

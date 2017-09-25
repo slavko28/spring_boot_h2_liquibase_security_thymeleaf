@@ -1,4 +1,4 @@
-package com.exampl.configuration;
+package com.example.configuration;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableAutoConfiguration
-@EntityScan(basePackages = {"com.exampl.model"})
-@EnableJpaRepositories(basePackages = {"com.exampl.repository"})
+@EntityScan(basePackages = {"com.example.model"})
+@EnableJpaRepositories(basePackages = {"com.example.repository"})
 @EnableTransactionManagement
 public class RepositoryConfiguration {
 }

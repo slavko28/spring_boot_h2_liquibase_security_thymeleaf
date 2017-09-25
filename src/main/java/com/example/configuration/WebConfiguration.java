@@ -1,4 +1,4 @@
-package com.exampl.configuration;
+package com.example.configuration;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
