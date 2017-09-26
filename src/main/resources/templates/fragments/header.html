@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+</head>
+<body>
+
+<div class="container">
+    <div th:fragment="header">
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" th:href="@{/}"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" th:href="@{/products}"><i class="fa fa-list" aria-hidden="true"></i>
+                            Products</a></li>
+                        <li><a href="#" th:href="@{/product/new}"><i class="fa fa-plus" aria-hidden="true"></i> Create
+                            Product</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="row text-center">
+                <div class="">
+                    <h2>Spring Framework</h2>
+
+                    <h3>Spring Boot Web App</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <img src="../../static/images/Example.png" width="300"
+                     th:src="@{/images/Example.png}"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
