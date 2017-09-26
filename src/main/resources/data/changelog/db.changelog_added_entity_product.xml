@@ -11,7 +11,7 @@
             </column>
             <column name="product_id" type="varchar(50)"/>
             <column name="description" type="varchar(100)"/>
-            <column name="imageUrl" type="varchar(250)"/>
+            <column name="image_url" type="varchar(250)"/>
             <column name="price" type="decimal(10,2)"/>
         </createTable>
 
