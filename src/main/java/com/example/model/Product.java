@@ -9,7 +9,9 @@ public class Product {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String productId;
+    @Version
+    private Integer version;
+
     private String description;
     private String imageUrl;
     private BigDecimal price;
@@ -20,14 +22,6 @@ public class Product {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId;
     }
 
     public String getDescription() {
@@ -52,5 +46,13 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 }
