@@ -19,6 +19,12 @@ public class ProductController {
         this.service = service;
     }
 
+    @RequestMapping("product/new")
+    public String createNew(Model model){
+        model.addAttribute("product", new Product());
+        return "productform";
+    }
+
     @RequestMapping(value = "product", method = RequestMethod.POST)
     public String save(Product product) {
         service.save(product);
