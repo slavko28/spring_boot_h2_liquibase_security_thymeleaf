@@ -19,6 +19,11 @@ public class ProductController {
         this.service = service;
     }
 
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String login(){
+        return "login";
+    }
+
     @RequestMapping("product/new")
     public String createNew(Model model){
         model.addAttribute("product", new Product());

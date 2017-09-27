@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head lang="en">
 
 </head>
@@ -14,8 +14,20 @@
                     <ul class="nav navbar-nav">
                         <li><a href="#" th:href="@{/product/all}"><i class="fa fa-list" aria-hidden="true"></i>
                             Products</a></li>
-                        <li><a href="#" th:href="@{/product/new}"><i class="fa fa-plus" aria-hidden="true"></i> Create
-                            Product</a></li>
+                        <li><a href="#" th:href="@{/product/new}" sec:authorize="hasRole('ADMIN')">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Create Product</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav justify-content-end">
+                        <li>
+                            <span class="welcome navbar-text" sec:authorize="isAuthenticated()">Welcome <span
+                                    sec:authentication="name"></span></span>
+                        </li>
+                        <li><a href="#" th:href="@{/login}" sec:authorize="!isAuthenticated()"><i class="fa fa-sign-in"
+                                                                                                  aria-hidden="true"></i>
+                            Sign in</a></li>
+                        <li><a href="#" th:href="@{/logout}" sec:authorize="isAuthenticated()"><i class="fa fa-sign-out"
+                                                                                                  aria-hidden="true"></i>
+                            Sign out</a></li>
                     </ul>
 
                 </div>
