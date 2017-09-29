@@ -17,17 +17,17 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product save(Product product) {
+    public Product saveOrUpdate(Product product) {
         return repository.save(product);
     }
 
     @Override
-    public Product getById(Integer id) {
+    public Product findOne(Integer id) {
         return repository.findOne(id);
     }
 
     @Override
-    public Iterable<Product> getAll() {
+    public Iterable<Product> findAll() {
         return repository.findAll();
     }
 
